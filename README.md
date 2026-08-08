@@ -1,11 +1,11 @@
 # 🚀 Netra Panel
 
-&lt;p align="center"&gt;
-  &lt;img src="https://img.shields.io/badge/Cloudflare-Worker-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" /&gt;
-  &lt;img src="https://img.shields.io/badge/VLESS-Protocol-blue?style=for-the-badge" /&gt;
-  &lt;img src="https://img.shields.io/badge/Trojan-Protocol-red?style=for-the-badge" /&gt;
-  &lt;img src="https://img.shields.io/badge/Warp-WireGuard-orange?style=for-the-badge" /&gt;
-&lt;/p&gt;
+<p align="center">
+  <img src="https://img.shields.io/badge/Cloudflare-Worker-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
+  <img src="https://img.shields.io/badge/VLESS-Protocol-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Trojan-Protocol-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Warp-WireGuard-orange?style=for-the-badge" />
+</p>
 
 پنل **Netra** یک پنل VLESS / Trojan / Warp مبتنی بر Cloudflare Worker است که بدون نیاز به سرور اختصاصی و کاملاً رایگان کار می‌کند.
 
