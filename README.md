@@ -1,23 +1,56 @@
 # 🚀 Netra Panel
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Cloudflare-Worker-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
-  <img src="https://img.shields.io/badge/VLESS-Protocol-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Trojan-Protocol-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Warp-WireGuard-orange?style=for-the-badge" />
-</p>
+پنل مدیریت پروکسی VLESS، Trojan و Warp روی Cloudflare Worker
 
-پنل **Netra** یک پنل VLESS / Trojan / Warp مبتنی بر Cloudflare Worker است که بدون نیاز به سرور اختصاصی و کاملاً رایگان کار می‌کند.
+📢 **کانال تلگرام:** [t.me/NetraIR](https://t.me/NetraIR)
 
-📢 **کانال تلگرام:** [t.me/Frog_V2ray](https://t.me/Frog_V2ray)
+## 🎯 مقادیر پیشفرض (بدون Wizard)
 
----
+| تنظیم | مقدار پیشفرض |
+|-------|-------------|
+| UUID | d355cf0a-833c-4e7d-8cfe-1395e655e71c |
+| Trojan Password | netra |
+| Subscription Path | netra |
 
-## ✨ ویژگی‌ها
+## 🔧 تغییر با Environment Variables
 
-- **VLESS + WebSocket** با پشتیبانی از TLS
-- **Trojan + WebSocket** با پشتیبانی از TLS
-- **Warp / Warp+** کانفیگ WireGuard
+در Cloudflare → Settings → Variables این متغیرها را اضافه کنید:
+- `UUID` → UUID دلخواه
+- `TR_PASS` → رمز دلخواه
+- `SUB_PATH` → مسیر دلخواه
+
+اگر تنظیم نکنید، از مقادیر پیشفرض استفاده می‌شود.
+
+## 📥 نصب (بدون Wrangler)
+
+1. وارد dash.cloudflare.com شوید
+2. Workers & Pages → Create → Create Worker
+3. نام: netra-panel → Deploy
+4. Edit Code → محتوای worker.js را paste کنید → Save and Deploy
+5. Workers & Pages → KV → Create namespace (نام: NETRA_KV)
+6. Worker → Settings → Variables → KV Namespace Bindings:
+   - Variable name: `KV`
+   - Namespace: NETRA_KV
+7. Save
+
+## 🎯 دسترسی به پنل
+
+https://your-worker.workers.dev/netra/panel
+
+- Username: ایمیل Cloudflare
+- Password: رمزی که اولین بار می‌سازید
+
+## 🔗 لینک‌های Subscription
+
+https://your-worker.workers.dev/netra/sub/xray
+https://your-worker.workers.dev/netra/sub/singbox
+https://your-worker.workers.dev/netra/sub/clash
+
+## 📞 پشتیبانی
+
+📢 [t.me/NetraIR](https://t.me/NetraIR)
+
+ساخته شده با ❤️ توسط NetraIR- **Warp / Warp+** کانفیگ WireGuard
 - **سابسکریپشن خودکار** برای v2rayNG, Nekoray, Streisand, Sing-box, Clash
 - **DoH Server** داخلی (DNS over HTTPS)
 - **پنل Web** زیبا و فارسی
