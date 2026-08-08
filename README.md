@@ -56,177 +56,59 @@
 | `SUB_PATH` | مسیر سابسکریپشن | `sub` |
 
 ### مرحله ۴: دسترسی به پنل
-📢 کانال تلگرام:
-https://t.me/Frog_V2ray
+https://your-worker.your-subdomain.workers.dev/netra/panel
+---
+
+## 📱 آموزش استفاده
+
+### v2rayNG (اندروید)
+1. برنامه را از [GitHub](https://github.com/2dust/v2rayNG/releases) نصب کنید
+2. روی **+** بزنید و **Import from Clipboard** را انتخاب کنید
+3. وارد پنل Netra شوید و لینک VLESS یا Trojan را کپی کنید
+4. در v2rayNG پیست کنید
+
+### Streisand (iOS)
+1. از App Store نصب کنید
+2. **Add Configuration** > **Subscribe**
+3. لینک سابسکریپشن پنل را وارد کنید:
+4. https://your-worker.workers.dev/netra/sub
+
+### Nekoray / NekoBox
+1. **Server** > **Import from Clipboard** یا **Add from Subscription**
+2. لینک سابسکریپشن را وارد کنید
 
 ---
 
-✨ امکانات
+## 🔗 مسیرهای مهم
 
-- ✅ VLESS + WebSocket با پشتیبانی TLS
-- ✅ Trojan + WebSocket با پشتیبانی TLS
-- ✅ کانفیگ Warp / Warp+ مبتنی بر WireGuard
-- ✅ سابسکریپشن خودکار برای:
-  - v2rayNG
-  - Nekoray
-  - Streisand
-  - Sing-box
-  - Clash
-- ✅ DoH Server داخلی (DNS over HTTPS)
-- ✅ پنل وب فارسی و زیبا
-- ✅ نصب مستقیم از داشبورد Cloudflare
-- ✅ بدون نیاز به Wrangler
-- ✅ بدون نیاز به دامنه اختصاصی (قابل استفاده با workers.dev)
+| مسیر | توضیحات |
+|------|---------|
+| `/netra/panel` | پنل مدیریت و نمایش کانفیگ‌ها |
+| `/netra/sub` | لینک سابسکریپشن (خودکار بر اساس User-Agent) |
+| `/netra/warp` | کانفیگ Warp/Warp+ |
+| `/dns-query` | سرور DoH (DNS over HTTPS) |
+| `/netra/ip` | نمایش IP و موقعیت شما |
 
 ---
 
-🚀 نصب دستی (بدون Wrangler)
+## ⚠️ نکات مهم
 
-مرحله ۱: ساخت Worker
-
-1. وارد داشبورد Cloudflare شوید:
-
-https://dash.cloudflare.com
-
-2. از منوی سمت چپ وارد بخش:
-
-"Workers & Pages"
-
-شوید.
-
-3. روی Create کلیک کنید.
-
-4. گزینه Hello World را انتخاب کنید.
-
-5. یک نام برای Worker انتخاب کنید:
-
-netra-panel
-
-6. روی Deploy کلیک کنید.
+- این پنل برای استفاده **شخصی** طراحی شده است
+- هر Worker روزانه محدودیت **۱۰۰,۰۰۰ درخواست** دارد
+- برای استفاده بهتر، از **آی‌پی تمیز** (Clean IP) استفاده کنید
+- کانال تلگرام ما را دنبال کنید: [@Frog_V2ray](https://t.me/Frog_V2ray)
 
 ---
 
-مرحله ۲: قرار دادن کد Worker
+## 📝 لایسنس
 
-1. وارد Worker ساخته‌شده شوید.
-2. به بخش Edit Code بروید.
-3. تمام کد پیش‌فرض را حذف کنید.
-4. محتوای فایل:
-
-worker.js
-
-را جایگزین کنید.
-5. روی Deploy کلیک کنید.
+این پروژه تحت لایسنس MIT منتشر شده است.
 
 ---
 
-مرحله ۳: تنظیم متغیرهای محیطی (اختیاری)
+<p align="center">
+ساخته شده با ❤️ توسط Netra Team
+</p>
 
-از مسیر:
 
-Settings → Variables
-
-می‌توانید متغیرهای زیر را اضافه کنید:
-
-نام متغیر| توضیحات| نمونه
-"UUID"| شناسه VLESS| "550e8400-e29b-41d4-a716-446655440000"
-"TROJAN_PASS"| رمز عبور Trojan| "mypassword123"
-"PANEL_PATH"| مسیر پنل| "netra"
-"SUB_PATH"| مسیر سابسکریپشن| "sub"
-
----
-
-مرحله ۴: ورود به پنل
-
-پس از Deploy شدن Worker، آدرس ایجادشده توسط Cloudflare را باز کنید:
-
-https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev
-
-پنل Netra آماده استفاده است.
-📢 کانال تلگرام:
-https://t.me/Frog_V2ray
-
----
-
-✨ امکانات
-
-- ✅ VLESS + WebSocket با پشتیبانی TLS
-- ✅ Trojan + WebSocket با پشتیبانی TLS
-- ✅ کانفیگ Warp / Warp+ مبتنی بر WireGuard
-- ✅ سابسکریپشن خودکار برای:
-  - v2rayNG
-  - Nekoray
-  - Streisand
-  - Sing-box
-  - Clash
-- ✅ DoH Server داخلی (DNS over HTTPS)
-- ✅ پنل وب فارسی و زیبا
-- ✅ نصب مستقیم از داشبورد Cloudflare
-- ✅ بدون نیاز به Wrangler
-- ✅ بدون نیاز به دامنه اختصاصی (قابل استفاده با workers.dev)
-
----
-
-🚀 نصب دستی (بدون Wrangler)
-
-مرحله ۱: ساخت Worker
-
-1. وارد داشبورد Cloudflare شوید:
-
-https://dash.cloudflare.com
-
-2. از منوی سمت چپ وارد بخش:
-
-"Workers & Pages"
-
-شوید.
-
-3. روی Create کلیک کنید.
-
-4. گزینه Hello World را انتخاب کنید.
-
-5. یک نام برای Worker انتخاب کنید:
-
-netra-panel
-
-6. روی Deploy کلیک کنید.
-
----
-
-مرحله ۲: قرار دادن کد Worker
-
-1. وارد Worker ساخته‌شده شوید.
-2. به بخش Edit Code بروید.
-3. تمام کد پیش‌فرض را حذف کنید.
-4. محتوای فایل:
-
-worker.js
-
-را جایگزین کنید.
-5. روی Deploy کلیک کنید.
-
----
-
-مرحله ۳: تنظیم متغیرهای محیطی (اختیاری)
-
-از مسیر:
-
-Settings → Variables
-
-می‌توانید متغیرهای زیر را اضافه کنید:
-
-نام متغیر| توضیحات| نمونه
-"UUID"| شناسه VLESS| "550e8400-e29b-41d4-a716-446655440000"
-"TROJAN_PASS"| رمز عبور Trojan| "mypassword123"
-"PANEL_PATH"| مسیر پنل| "netra"
-"SUB_PATH"| مسیر سابسکریپشن| "sub"
-
----
-
-مرحله ۴: ورود به پنل
-
-پس از Deploy شدن Worker، آدرس ایجادشده توسط Cloudflare را باز کنید:
-
-https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev
-
-پنل Netra آماده استفاده است.
+   
