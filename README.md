@@ -1,147 +1,251 @@
-# 🚀 Netra Panel
+<div align="center">
 
-پنل مدیریت پروکسی VLESS، Trojan و Warp روی Cloudflare Worker
+# 💜 Netra Panel
 
-📢 **کانال تلگرام:** [t.me/NetraIR](https://t.me/NetraIR)
+**زبان / Language / Язык / 语言:**
+[فارسی](#فارسی) | [English](#english) | [Русский](#русский) | [中文](#中文)
 
-## 🎯 مقادیر پیشفرض (بدون Wizard)
-
-| تنظیم | مقدار پیشفرض |
-|-------|-------------|
-| UUID | d355cf0a-833c-4e7d-8cfe-1395e655e71c |
-| Trojan Password | netra |
-| Subscription Path | netra |
-
-## 🔧 تغییر با Environment Variables
-
-در Cloudflare → Settings → Variables این متغیرها را اضافه کنید:
-- `UUID` → UUID دلخواه
-- `TR_PASS` → رمز دلخواه
-- `SUB_PATH` → مسیر دلخواه
-
-اگر تنظیم نکنید، از مقادیر پیشفرض استفاده می‌شود.
-
-## 📥 نصب (بدون Wrangler)
-
-1. وارد dash.cloudflare.com شوید
-2. Workers & Pages → Create → Create Worker
-3. نام: netra-panel → Deploy
-4. Edit Code → محتوای worker.js را paste کنید → Save and Deploy
-5. Workers & Pages → KV → Create namespace (نام: NETRA_KV)
-6. Worker → Settings → Variables → KV Namespace Bindings:
-   - Variable name: `KV`
-   - Namespace: NETRA_KV
-7. Save
-
-## 🎯 دسترسی به پنل
-
-https://your-worker.workers.dev/netra/panel
-
-- Username: ایمیل Cloudflare
-- Password: رمزی که اولین بار می‌سازید
-
-## 🔗 لینک‌های Subscription
-
-https://your-worker.workers.dev/netra/sub/xray
-https://your-worker.workers.dev/netra/sub/singbox
-https://your-worker.workers.dev/netra/sub/clash
-
-## 📞 پشتیبانی
-
-📢 [t.me/NetraIR](https://t.me/NetraIR)
-
-ساخته شده با ❤️ توسط NetraIR- **Warp / Warp+** کانفیگ WireGuard
-- **سابسکریپشن خودکار** برای v2rayNG, Nekoray, Streisand, Sing-box, Clash
-- **DoH Server** داخلی (DNS over HTTPS)
-- **پنل Web** زیبا و فارسی
-- **بدون نیاز به Wrangler** - نصب مستقیم از داشبورد Cloudflare
-- **بدون نیاز به دامنه** - با دامنه workers.dev کار می‌کند
+</div>
 
 ---
 
-## 🚀 نصب دستی (بدون Wrangler)
+<a name="فارسی"></a>
+## 🇮🇷 فارسی
 
-### مرحله ۱: ساخت Worker
-1. به [dash.cloudflare.com](https://dash.cloudflare.com) بروید و لاگین کنید
-2. از منوی سمت چب، **Workers & Pages** را انتخاب کنید
-3. روی **Create** کلیک کنید
-4. گزینه **"Hello World"** را انتخاب کنید
-5. یک نام برای Worker خود انتخاب کنید (مثلاً `netra-panel`)
-6. روی **Deploy** کلیک کنید
+<div align="right">
 
-### مرحله ۲: آپلود کد
-1. وارد داشبورد Worker خود شوید
-2. به تب **Edit Code** بروید
-3. **تمام کد پیش‌فرض** را پاک کنید
-4. محتوای فایل `worker.js` این پروژه را **کپی و پیست** کنید
-5. روی **Deploy** کلیک کنید
+### پنل Netra
 
-### مرحله ۳: تنظیم متغیرها (اختیاری)
-1. در داشبورد Worker، به تب **Settings** بروید
-2. روی **Variables** کلیک کنید
-3. می‌توانید متغیرهای زیر را اضافه کنید:
+یک پنل پروکسی VLESS / Trojan رایگان و خودمیزبان که کاملاً روی **Cloudflare Workers** اجرا می‌شه.
 
-| نام متغیر | توضیحات | مثال |
-|-----------|---------|------|
-| `UUID` | شناسه VLESS | `550e8400-e29b-41d4-a716-446655440000` |
-| `TROJAN_PASS` | رمز Trojan | `mypassword123` |
-| `PANEL_PATH` | مسیر پنل | `netra` |
-| `SUB_PATH` | مسیر سابسکریپشن | `sub` |
+بدون نیاز به VPS، بدون نگهداری سرور، بدون هزینه‌ی ماهانه — در چند دقیقه دیپلوی کنید و همه‌چیز رو از یک پنل تمیز مدیریت کنید.
 
-### مرحله ۴: دسترسی به پنل
-https://your-worker.your-subdomain.workers.dev/netra/panel
----
+[گزارش باگ](https://github.com/netrair/issues) · [درخواست ویژگی جدید](https://github.com/netrair/issues) · [پشتیبانی تلگرام](https://t.me/NetraIR)
 
-## 📱 آموزش استفاده
+#### ✨ ویژگی‌ها
 
-### v2rayNG (اندروید)
-1. برنامه را از [GitHub](https://github.com/2dust/v2rayNG/releases) نصب کنید
-2. روی **+** بزنید و **Import from Clipboard** را انتخاب کنید
-3. وارد پنل Netra شوید و لینک VLESS یا Trojan را کپی کنید
-4. در v2rayNG پیست کنید
+- ⚡ کاملاً روی Cloudflare Workers اجرا می‌شه — بدون VPS، بدون Docker، بدون سروری که نیاز به آپدیت یا ری‌استارت داشته باشه
+- 🔐 پشتیبانی از پروتکل‌های **VLESS** و **Trojan**
+- 🌍 پشتیبانی از **Warp / Warp Pro** برای مسیرهای اضافی
+- 📱 لینک سابسکریپشن برای کلاینت‌های Xray-core، sing-box، Clash و WireGuard (مثل v2rayNG، Streisand، Clash Meta، Hiddify، NekoBox و...)
+- 🧩 تنظیمات Fragment و نویز برای عبور بهتر از فیلترینگ‌های سخت‌گیرانه
+- 🎛️ پنل وب کامل — همه‌چیز (UUID، پسورد، پورت‌ها، DNS، قوانین مسیریابی، لیست‌های bypass/block) بدون نیاز به دست‌زدن به کد قابل مدیریته
+- 🚀 دیپلوی با یک کلیک — بلافاصله بعد از دیپلوی با مقادیر پیش‌فرض کار می‌کنه، بدون نیاز به Wizard جداگانه
+- 🔒 رمز پنل اختیاریه — می‌تونید پنل رو با رمز محافظت کنید یا اگه فقط خودتون آدرسش رو دارید، ردش کنید
 
-### Streisand (iOS)
-1. از App Store نصب کنید
-2. **Add Configuration** > **Subscribe**
-3. لینک سابسکریپشن پنل را وارد کنید:
-4. https://your-worker.workers.dev/netra/sub
+#### 🚀 نصب و دیپلوی
 
-### Nekoray / NekoBox
-1. **Server** > **Import from Clipboard** یا **Add from Subscription**
-2. لینک سابسکریپشن را وارد کنید
+۱. روی دکمه‌ی **Deploy to Cloudflare Workers** بزنید، یا یک Worker جدید توی [داشبورد Cloudflare](https://dash.cloudflare.com) بسازید.
+۲. محتوای فایل `worker.js` رو کپی و توی ویرایشگر Worker جای‌گذاری و دیپلوی کنید.
+۳. یک **KV Namespace** با نام `kv` به Worker متصل کنید (از مسیر Settings → Variables → KV Namespace Bindings).
+۴. آدرس Worker خودتون رو باز کنید و برید به `/panel` — بار اول ازتون خواسته می‌شه یک رمز برای پنل تعیین کنید یا ردش کنید.
 
----
+همین! پنل بلافاصله با تنظیمات پیش‌فرض کار می‌کنه. بعداً می‌تونید همه‌چیز (UUID، پسورد Trojan، مسیر امن، پورت‌ها، قوانین مسیریابی و...) رو از داخل پنل شخصی‌سازی کنید.
 
-## 🔗 مسیرهای مهم
+##### متغیرهای محیطی اختیاری
 
-| مسیر | توضیحات |
-|------|---------|
-| `/netra/panel` | پنل مدیریت و نمایش کانفیگ‌ها |
-| `/netra/sub` | لینک سابسکریپشن (خودکار بر اساس User-Agent) |
-| `/netra/warp` | کانفیگ Warp/Warp+ |
-| `/dns-query` | سرور DoH (DNS over HTTPS) |
-| `/netra/ip` | نمایش IP و موقعیت شما |
+| متغیر | توضیح |
+|---|---|
+| `UUID` | UUID دلخواه برای VLESS |
+| `TR_PASS` | پسورد دلخواه برای Trojan |
+| `SUB_PATH` / `WS_PATH` | مسیر امن دلخواه برای پنل/سابسکریپشن |
+| `CF_ACCOUNT_ID`, `CF_EMAIL`, `CF_API_TOKEN` | فقط در صورتی لازمه که بخواید پنل بتونه DNS/دامنه‌ی کلادفلرتون رو مدیریت کنه |
+
+اگه این متغیرها رو ست نکنید، پنل با مقادیر پیش‌فرض کاری دیپلوی می‌شه — فقط قبل از به‌اشتراک‌گذاشتن آدرس Worker با دیگران، حتماً از پنل عوضشون کنید.
+
+#### 🔒 نکات امنیتی
+
+- اگه گزینه‌ی **Skip password** رو بزنید، هر کسی که آدرس Workerتون رو داشته باشه می‌تونه وارد پنل بشه. این کار رو فقط برای دیپلوی شخصی/تستی انجام بدید.
+- قبل از اشتراک‌گذاری لینک سابسکریپشن، UUID/پسورد Trojan/مسیر امن پیش‌فرض رو از پنل عوض کنید.
+- با آدرس Workerتون مثل یک اطلاعات محرمانه رفتار کنید — این آدرس دروازه‌ی ورود به پنلتونه.
+
+#### 💬 پشتیبانی
+
+سوال یا مشکلی دارید؟ توی تلگرام پیام بدید: **[@NetraIR](https://t.me/NetraIR)**
+
+#### 🙏 تشکر و قدردانی
+
+پنل Netra یک نسخه‌ی سفارشی‌سازی و تغییر برند یافته از پروژه‌ی متن‌باز [BPB Worker Panel](https://github.com/bia-pain-bache/BPB-Worker-Panel) از **bia-pain-bache** هست. تمام اعتبار معماری اصلی و پیاده‌سازی پروتکل‌ها متعلق به پروژه‌ی اصلی و توسعه‌دهندگانشه.
+
+</div>
 
 ---
 
-## ⚠️ نکات مهم
+<a name="english"></a>
+## 🇬🇧 English
 
-- این پنل برای استفاده **شخصی** طراحی شده است
-- هر Worker روزانه محدودیت **۱۰۰,۰۰۰ درخواست** دارد
-- برای استفاده بهتر، از **آی‌پی تمیز** (Clean IP) استفاده کنید
-- کانال تلگرام ما را دنبال کنید: [@Frog_V2ray](https://t.me/Frog_V2ray)
+### Netra Panel
+
+A free, self-hosted VLESS / Trojan proxy panel that runs entirely on **Cloudflare Workers**.
+
+No VPS. No server maintenance. No monthly cost — deploy in minutes and manage everything from a clean web panel.
+
+[Report a Bug](https://github.com/netrair/issues) · [Request a Feature](https://github.com/netrair/issues) · [Telegram Support](https://t.me/NetraIR)
+
+#### ✨ Features
+
+- ⚡ **Runs on Cloudflare Workers** — no VPS, no Docker, no server to patch or reboot
+- 🔐 **VLESS & Trojan** protocol support out of the box
+- 🌍 **Warp / Warp Pro** integration for extra routing options
+- 📱 **Subscription links** for Xray-core, sing-box, Clash, and WireGuard-based clients (v2rayNG, Streisand, Clash Meta, Hiddify, NekoBox, and more)
+- 🧩 **Fragment & noise settings** to help traffic blend in on restrictive networks
+- 🎛️ **Full web panel** — manage everything (UUID, password, ports, DNS, routing rules, bypass/block lists) without touching code
+- 🚀 **One-click deploy** — works with sensible defaults right after deployment, no separate setup wizard required
+- 🔒 **Optional panel password** — protect your panel, or skip it if you're the only one with the URL
+
+#### 🚀 Deploy
+
+1. Click **Deploy to Cloudflare Workers**, or manually create a new Worker in your [Cloudflare dashboard](https://dash.cloudflare.com).
+2. Paste the contents of `worker.js` into the Worker editor and deploy.
+3. Add a **KV Namespace** binding named `kv` to the Worker (Settings → Variables → KV Namespace Bindings).
+4. Open your Worker's URL and go to `/panel` — you'll be prompted to set a panel password (or skip it) on first visit.
+
+That's it — the panel works immediately with built-in defaults. You can customize everything (UUID, Trojan password, secure path, ports, routing rules, etc.) from inside the panel afterward.
+
+##### Optional environment variables
+
+| Variable | Description |
+|---|---|
+| `UUID` | Custom VLESS UUID |
+| `TR_PASS` | Custom Trojan password |
+| `SUB_PATH` / `WS_PATH` | Custom secure panel/subscription path |
+| `CF_ACCOUNT_ID`, `CF_EMAIL`, `CF_API_TOKEN` | Needed only if you want the panel to manage Cloudflare DNS/domain settings for you |
+
+If you skip these, the panel deploys with working built-in defaults — just remember to change them from the panel before sharing the worker URL with others.
+
+#### 🔒 Security notes
+
+- If you choose **Skip password**, anyone with your Worker URL can access the panel. Only do this for a private/testing deployment.
+- Change the default UUID/Trojan password/secure path from the panel before sharing your subscription link with anyone.
+- Treat your Worker URL like a secret — it's the entry point to your panel.
+
+#### 💬 Support
+
+Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
+
+#### 🙏 Acknowledgements
+
+Netra Panel is a customized, rebranded fork built on top of the excellent open-source [BPB Worker Panel](https://github.com/bia-pain-bache/BPB-Worker-Panel) project by **bia-pain-bache**. All credit for the original architecture and protocol implementation goes to the upstream project and its contributors.
 
 ---
 
-## 📝 لایسنس
+<a name="русский"></a>
+## 🇷🇺 Русский
 
-این پروژه تحت لایسنس MIT منتشر شده است.
+### Netra Panel
+
+Бесплатная self-hosted панель для прокси VLESS / Trojan, которая полностью работает на **Cloudflare Workers**.
+
+Без VPS. Без обслуживания сервера. Без ежемесячной платы — разверните за пару минут и управляйте всем через удобную веб-панель.
+
+[Сообщить об ошибке](https://github.com/netrair/issues) · [Предложить функцию](https://github.com/netrair/issues) · [Поддержка в Telegram](https://t.me/NetraIR)
+
+#### ✨ Возможности
+
+- ⚡ **Работает на Cloudflare Workers** — не нужен VPS, Docker или обслуживание сервера
+- 🔐 Поддержка протоколов **VLESS и Trojan** из коробки
+- 🌍 Интеграция с **Warp / Warp Pro** для дополнительных маршрутов
+- 📱 **Ссылки подписки** для Xray-core, sing-box, Clash и WireGuard-клиентов (v2rayNG, Streisand, Clash Meta, Hiddify, NekoBox и др.)
+- 🧩 Настройки **Fragment и noise** для лучшего обхода жёсткой фильтрации трафика
+- 🎛️ **Полноценная веб-панель** — управляйте всем (UUID, пароль, порты, DNS, правила маршрутизации, списки bypass/block) без изменения кода
+- 🚀 **Развёртывание в один клик** — работает с готовыми настройками сразу после деплоя, отдельный мастер настройки не требуется
+- 🔒 **Пароль панели — по желанию** — защитите панель паролем или пропустите этот шаг, если только у вас есть ссылка
+
+#### 🚀 Установка
+
+1. Нажмите **Deploy to Cloudflare Workers** или создайте новый Worker вручную в [панели Cloudflare](https://dash.cloudflare.com).
+2. Вставьте содержимое файла `worker.js` в редактор Worker и разверните его.
+3. Добавьте привязку **KV Namespace** с именем `kv` к Worker (Settings → Variables → KV Namespace Bindings).
+4. Откройте URL вашего Worker и перейдите на `/panel` — при первом входе будет предложено задать пароль панели (или пропустить этот шаг).
+
+Готово — панель сразу работает со встроенными значениями по умолчанию. Позже вы сможете настроить всё (UUID, пароль Trojan, секретный путь, порты, правила маршрутизации и т.д.) прямо в панели.
+
+##### Необязательные переменные окружения
+
+| Переменная | Описание |
+|---|---|
+| `UUID` | Собственный UUID для VLESS |
+| `TR_PASS` | Собственный пароль для Trojan |
+| `SUB_PATH` / `WS_PATH` | Собственный секретный путь панели/подписки |
+| `CF_ACCOUNT_ID`, `CF_EMAIL`, `CF_API_TOKEN` | Нужны, только если панель должна управлять DNS/доменом Cloudflare за вас |
+
+Если не задать эти переменные, панель развернётся с рабочими значениями по умолчанию — просто не забудьте изменить их в панели перед тем, как делиться ссылкой на Worker с кем-либо.
+
+#### 🔒 Заметки по безопасности
+
+- Если выбрать **Skip password**, любой, у кого есть ссылка на ваш Worker, сможет открыть панель. Используйте это только для личного/тестового развёртывания.
+- Перед тем как делиться ссылкой подписки, измените в панели стандартный UUID/пароль Trojan/секретный путь.
+- Относитесь к URL вашего Worker как к секретной информации — это точка входа в вашу панель.
+
+#### 💬 Поддержка
+
+Вопросы или проблемы? Пишите в Telegram: **[@NetraIR](https://t.me/NetraIR)**
+
+#### 🙏 Благодарности
+
+Netra Panel — это кастомизированный форк с изменённым брендингом на основе отличного open-source проекта [BPB Worker Panel](https://github.com/bia-pain-bache/BPB-Worker-Panel) от **bia-pain-bache**. Вся заслуга за исходную архитектуру и реализацию протоколов принадлежит оригинальному проекту и его разработчикам.
 
 ---
 
-<p align="center">
-ساخته شده با ❤️ توسط Netra Team
-</p>
+<a name="中文"></a>
+## 🇨🇳 中文
 
+### Netra Panel
 
-   
+一个完全运行在 **Cloudflare Workers** 上的免费自托管 VLESS / Trojan 代理面板。
+
+无需 VPS，无需维护服务器，无需每月付费 —— 几分钟内即可部署完成，通过简洁的网页面板管理一切。
+
+[提交 Bug](https://github.com/netrair/issues) · [功能建议](https://github.com/netrair/issues) · [Telegram 支持](https://t.me/NetraIR)
+
+#### ✨ 功能特点
+
+- ⚡ **完全运行在 Cloudflare Workers 上** —— 无需 VPS、Docker，也无需维护或重启服务器
+- 🔐 开箱即用支持 **VLESS 和 Trojan** 协议
+- 🌍 集成 **Warp / Warp Pro**，提供更多路由选择
+- 📱 为 Xray-core、sing-box、Clash 和 WireGuard 客户端提供**订阅链接**（v2rayNG、Streisand、Clash Meta、Hiddify、NekoBox 等）
+- 🧩 **Fragment 与噪声设置**，帮助流量更好地绕过严格的网络封锁
+- 🎛️ **完整的网页面板** —— 无需接触代码即可管理一切（UUID、密码、端口、DNS、路由规则、绕过/屏蔽列表）
+- 🚀 **一键部署** —— 部署后立即使用内置默认配置即可运行，无需单独的设置向导
+- 🔒 **面板密码可选** —— 可为面板设置密码保护，若只有你自己掌握链接，也可以跳过
+
+#### 🚀 部署方法
+
+1. 点击 **Deploy to Cloudflare Workers**，或前往你的 [Cloudflare 控制台](https://dash.cloudflare.com) 手动创建一个新的 Worker。
+2. 将 `worker.js` 的内容复制并粘贴到 Worker 编辑器中，然后部署。
+3. 为该 Worker 添加一个名为 `kv` 的 **KV Namespace** 绑定（路径：Settings → Variables → KV Namespace Bindings）。
+4. 打开你的 Worker 地址并访问 `/panel` —— 首次访问时会提示你设置面板密码（也可以选择跳过）。
+
+就这么简单 —— 面板会立即使用内置默认配置正常运行。之后你可以在面板内自行自定义所有设置（UUID、Trojan 密码、安全路径、端口、路由规则等）。
+
+##### 可选环境变量
+
+| 变量 | 说明 |
+|---|---|
+| `UUID` | 自定义 VLESS UUID |
+| `TR_PASS` | 自定义 Trojan 密码 |
+| `SUB_PATH` / `WS_PATH` | 自定义面板/订阅安全路径 |
+| `CF_ACCOUNT_ID`, `CF_EMAIL`, `CF_API_TOKEN` | 仅当你希望面板帮你管理 Cloudflare DNS/域名设置时才需要 |
+
+如果不设置这些变量，面板将使用内置的默认值正常部署 —— 只需记得在与他人分享 Worker 地址之前，在面板中修改这些默认值。
+
+#### 🔒 安全提示
+
+- 如果选择 **Skip password（跳过密码）**，任何拥有你 Worker 地址的人都可以访问面板。请仅在个人/测试部署时使用此选项。
+- 在分享订阅链接前，请务必在面板中修改默认的 UUID / Trojan 密码 / 安全路径。
+- 请像对待机密信息一样对待你的 Worker 地址 —— 它是进入你面板的入口。
+
+#### 💬 获取支持
+
+有问题或遇到故障？请通过 Telegram 联系：**[@NetraIR](https://t.me/NetraIR)**
+
+#### 🙏 致谢
+
+Netra Panel 是基于优秀的开源项目 [BPB Worker Panel](https://github.com/bia-pain-bache/BPB-Worker-Panel)（作者 **bia-pain-bache**）进行自定义与品牌重塑后的分支版本。原始架构与协议实现的全部功劳归属于上游项目及其贡献者。
+
+---
+
+<div align="center">
+Made with 💜 for a freer internet.
+</div>
+
