@@ -1,5 +1,9 @@
-# Netra Panel
-
+# 💜Netra Panel
+<p align="center">
+  <img src="https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
+  <img src="https://img.shields.io/badge/Protocol-VLESS-00ADD8?style=for-the-badge&logo=v&logoColor=white" alt="VLESS">
+  <img src="https://img.shields.io/badge/Protocol-Trojan-00ADD8?style=for-the-badge&logo=trojan&logoColor=white" alt="Trojan">
+</p>
 یک پنل پروکسی رایگان، خودمیزبان و قدرتمند بر بستر Cloudflare Workers
 
 **زبان / Language / Язык / 语言:** [فارسی](#فارسی) | [English](#english) | [Русский](#русский) | [中文](#中文)
