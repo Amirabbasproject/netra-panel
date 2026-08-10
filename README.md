@@ -271,3 +271,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 <p align="center">
   <sub>Made with ❤️ for a freer internet.</sub>
 </p>
+
+## 🙏 Acknowledgments
+
+Special thanks to [BPB](https://github.com/bia-pain-bache/BPB-Worker-Panel).
+
