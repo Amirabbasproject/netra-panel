@@ -16,6 +16,8 @@
 
 یک پنل پروکسی VLESS / Trojan رایگان و خودمیزبان که کاملاً روی **Cloudflare Workers** اجرا می‌شه. بدون نیاز به VPS، بدون نگهداری سرور، بدون هزینه‌ی ماهانه — در چند دقیقه دیپلوی کنید و همه‌چیز رو از یک پنل تمیز مدیریت کنید.
 
+🤖 همچنین می‌تونید با **بات نصب‌کننده‌ی تلگرام** [@irNetra_bot](https://t.me/irNetra_bot) به‌سادگی و بدون دردسر نصب کنید.
+
 [گزارش باگ](https://github.com/netrair/issues) · [درخواست ویژگی جدید](https://github.com/netrair/issues) · [پشتیبانی تلگرام](https://t.me/NetraIR)
 
 ---
@@ -63,6 +65,8 @@
 ### Netra Panel
 
 A free, self-hosted VLESS / Trojan proxy panel that runs entirely on **Cloudflare Workers**. No VPS. No server maintenance. No monthly cost — deploy in minutes and manage everything from a clean web panel.
+
+🤖 You can also install it easily using our **Telegram installer bot**: [@irNetra_bot](https://t.me/irNetra_bot).
 
 [Report a Bug](https://github.com/netrair/issues) · [Request a Feature](https://github.com/netrair/issues) · [Telegram Support](https://t.me/NetraIR)
 
@@ -112,6 +116,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 
 Бесплатная self-hosted панель для прокси VLESS / Trojan, которая полностью работает на **Cloudflare Workers**. Без VPS. Без обслуживания сервера. Без ежемесячной платы — разверните за пару минут и управляйте всем через удобную веб-панель.
 
+🤖 Также можно установить панель через нашего **Telegram-бота для установки**: [@irNetra_bot](https://t.me/irNetra_bot).
+
 [Сообщить об ошибке](https://github.com/netrair/issues) · [Предложить функцию](https://github.com/netrair/issues) · [Поддержка в Telegram](https://t.me/NetraIR)
 
 ---
@@ -159,6 +165,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 ### Netra Panel
 
 一个完全运行在 **Cloudflare Workers** 上的免费自托管 VLESS / Trojan 代理面板。无需 VPS，无需维护服务器，无需每月付费 —— 几分钟内即可部署完成，通过简洁的网页面板管理一切。
+
+🤖 你也可以使用我们的 **Telegram 安装机器人**：[@irNetra_bot](https://t.me/irNetra_bot) 轻松完成安装。
 
 [提交 Bug](https://github.com/netrair/issues) · [功能建议](https://github.com/netrair/issues) · [Telegram 支持](https://t.me/NetraIR)
 
