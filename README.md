@@ -1,21 +1,21 @@
 # 💜 Netra Panel
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
-  <img src="https://img.shields.io/badge/Protocol-VLESS-00ADD8?style=for-the-badge&logo=v&logoColor=white" alt="VLESS">
-  <img src="https://img.shields.io/badge/Protocol-Trojan-00ADD8?style=for-the-badge&logo=trojan&logoColor=white" alt="Trojan">
-  <img src="https://img.shields.io/badge/Cloudflare-Warp-orange?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Warp">
-  <img src="https://img.shields.io/badge/Fragment-Anti--Filtering-blueviolet?style=for-the-badge" alt="Fragment">
-  <img src="https://img.shields.io/badge/Telegram-Installer%20Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot">
+  <img src="https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare Workers"> <img src="https://img.shields.io/badge/Cloudflare-Warp-orange?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Warp"><br>
+  <img src="https://img.shields.io/badge/Protocol-VLESS-00ADD8?style=for-the-badge&logo=v&logoColor=white" alt="VLESS"> <img src="https://img.shields.io/badge/Protocol-Trojan-00ADD8?style=for-the-badge&logo=trojan&logoColor=white" alt="Trojan"><br>
+  <img src="https://img.shields.io/badge/Fragment-Anti--Filtering-blueviolet?style=for-the-badge" alt="Fragment"> <img src="https://img.shields.io/badge/Telegram-Installer%20Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot">
+</p>
+
+<p align="center">
+  <strong>🇬🇧 English</strong> &nbsp;•&nbsp;
+  <a href="#lang-fa">🇮🇷 فارسی</a> &nbsp;•&nbsp;
+  <a href="#lang-ru">🇷🇺 Русский</a> &nbsp;•&nbsp;
+  <a href="#lang-zh">🇨🇳 中文</a>
 </p>
 
 A free, self-hosted VLESS / Trojan proxy panel that runs entirely on **Cloudflare Workers**.
 
-Click a language below to expand it — **English** is shown by default.
-
 ---
-
-## English
 
 ### Netra Panel
 
@@ -69,7 +69,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 ---
 
 <details>
-<summary><strong>فارسی (Persian) — برای باز شدن کلیک کنید</strong></summary>
+<summary><strong>🇮🇷 فارسی</strong></summary>
+<a id="lang-fa"></a>
 
 ### پنل Netra
 
@@ -125,7 +126,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 ---
 
 <details>
-<summary><strong>Русский — нажмите, чтобы открыть</strong></summary>
+<summary><strong>🇷🇺 Русский</strong></summary>
+<a id="lang-ru"></a>
 
 ### Netra Panel
 
@@ -181,7 +183,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 ---
 
 <details>
-<summary><strong>中文 — 点击展开</strong></summary>
+<summary><strong>🇨🇳 中文</strong></summary>
+<a id="lang-zh"></a>
 
 ### Netra Panel
 
