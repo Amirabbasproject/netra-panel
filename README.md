@@ -117,6 +117,13 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 
 ---
 
+#### 🎬 ویدیو آموزشی
+
+* [آموزش نصب و راه‌اندازی (۱)](https://youtu.be/oob2gmPuYsE?si=kLjtH50fPLzIk-UP)
+* [آموزش نصب و راه‌اندازی (۲)](https://youtu.be/5G7vzxoCec4)
+
+---
+
 #### پشتیبانی
 
 سوال یا مشکلی دارید؟ توی تلگرام پیام بدید: **[@NetraIR](https://t.me/NetraIR)**
@@ -231,6 +238,12 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 
 ---
 
+#### 🎬 教学视频
+
+* [安装与部署教程](https://youtu.be/TiYE2SF_bwA)
+
+---
+
 #### 获取支持
 
 有问题或遇到故障？请通过 Telegram 联系：**[@NetraIR](https://t.me/NetraIR)**
@@ -243,4 +256,5 @@ Made with ❤️ for a freer internet.
 
 ---
 > UI Idea inspired by [BPB-Worker-Panel](https://github.com/bia-pain-bache/BPB-Worker-Panel).
+>
 > 
