@@ -242,6 +242,9 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 
 * [安装与部署教程](https://youtu.be/TiYE2SF_bwA)
 
+## 📚 中文教程
+
+[完整图文部署教程](https://www.zoio.net/2026/08/netra-panel.html)
 ---
 
 #### 获取支持
