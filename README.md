@@ -121,7 +121,8 @@ Questions or issues? Reach out on Telegram: **[@NetraIR](https://t.me/NetraIR)**
 
 * [آموزش نصب و راه‌اندازی (۱)](https://youtu.be/oob2gmPuYsE?si=kLjtH50fPLzIk-UP)
 * [آموزش نصب و راه‌اندازی (۲)](https://youtu.be/5G7vzxoCec4)
-
+ 
+ * [ آموزش نصب و راه‌اندازی (۳)](https://youtu.be/qluhGfGNbwk?si=oTLkVuC1z-5L03fy)
 ---
 
 #### پشتیبانی
